@@ -1,0 +1,17 @@
+name = "dev-stocknotifyworker"
+main = "src/index.ts"
+compatibility_date = "2026-05-16"
+
+[observability]
+enabled = true
+
+[triggers]
+crons = [
+  "0 22 * * *",
+  "0 14 * * *"
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "stock-notify-db"
+database_id = "8149c2b3-b8a5-41db-97f7-6331137ef2de"
